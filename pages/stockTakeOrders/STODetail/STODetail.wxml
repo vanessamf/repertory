@@ -1,0 +1,50 @@
+<import src="../../../template/orderTmpl/basicInfo.wxml" />
+<import src="../../../template/orderTmpl/materials.wxml" />
+
+<view class="main-container">
+ 
+  <scroll-view class="PODetail-wrapper"scroll-y="true">
+    <view class="list-title">
+    <text>{{item.basicInfo.title}}</text>
+  
+    <text class="submit-color" wx:if="{{flag==0}}">未提交</text>
+    <text class="submit-color" wx:elif="{{flag==1}}">待审批</text>
+    <text class="submit-color" wx:elif="{{flag==2}}">已审批</text>
+  </view>
+  <view class="basic-list">
+        <view class="basic-item">
+            <text>{{item.basicInfo.list[0].title}}</text>
+          <view class="item-right grey-color">
+            <text>{{item.basicInfo.list[0].content}}</text>
+          </view>
+        </view>  
+        <view class="basic-item">
+          <text>{{item.basicInfo.list[1].title}}</text>
+          <view class="item-right grey-color">
+            <text class="">￥{{item.basicInfo.list[1].content}}</text>
+          </view>
+        </view>    
+  </view>
+    <template is="materials2" data="{{...item}}"/>
+   </scroll-view>
+  
+  <view class="add-order-footer"wx:if="{{item.flag==0}}">
+    <view class="btn-left">
+      <button class="btn-primary sm-btn">打印</button>
+      <button class="btn-default sm-btn">删除</button>
+    </view>
+    <view class="btn-right">
+      <button class="btn-submit md-btn" bindtap='jumpPage'>提交</button>
+    </view>
+  </view>
+  <view class="add-order-footer detail-footer"wx:if="{{item.flag!=0}}">
+    <view class="btn-left">
+      <button class="btn-primary lg-btn">打印</button>
+    </view>
+    <view class="btn-right" bindtap='jumpToHomepage'>
+      
+          <button class="btn-submit lg-btn" bindtap=''>返回首页</button>
+   
+    </view>
+  </view>
+</view>

@@ -1,0 +1,133 @@
+/* pages/homepage/homepage.wxss */
+page{
+  height:100%;
+  background:#f7f7f7;
+}
+.hp-container{
+  height:100%;
+}
+.hp-header {
+   height:320rpx;
+   background:#16c4bb;
+}
+.hp-title{
+  box-sizing: border-box;
+  padding:10rpx 0;
+  height:200rpx;
+  line-height: 1;
+}
+.hp-title .icon-wrapper{
+  box-sizing: border-box;
+  margin:0 auto;
+  height:120rpx;
+  width:120rpx; 
+  line-height: 120rpx; 
+  text-align: center;
+  background:#fff;
+  border:5rpx solid #71dcd6;
+  border-radius:50%;
+}
+.hp-title .icon-wrapper .iconfont{
+  font-size:60rpx;
+  color:#dc6164;
+}
+.hp-title  .title-wrapper{
+   width: 100%;
+   height:60rpx;
+   text-align: center;
+}
+.hp-title .title-text{
+  display: inline-block;
+  line-height: 30rpx;
+  font-size:34rpx;
+  color:#fff;
+}
+.repertory-wrapper{
+  height:120rpx;
+  display: flex;
+  font-size:30rpx;
+  color:#fff;
+}
+.repertory-item{
+  position: relative;
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.repertory-item:first-child::after{
+  position: absolute;
+  right:0;
+  top:40rpx;
+  content:"";
+  width:2rpx;
+  height:40rpx;
+  background-color:#fff;
+}
+
+.hp-wrapper{
+  padding:15rpx 20rpx;
+}
+.hp-content{
+  background: #fff;
+  border-radius:10rpx;
+}
+.hp-content .title{
+  height:100rpx;
+  line-height: 100rpx;
+  padding:0 25rpx;
+  font-size:32rpx;
+  border-bottom:1rpx solid #d2d2d2;
+}
+.nav-list{
+  display: flex;
+  flex-wrap: wrap;
+  font-size:30rpx;
+}
+.nav-list navigator{
+  flex:0 1 33.3%;
+  box-sizing:border-box;
+  border-bottom:1rpx solid #d2d2d2;
+}
+.nav-list navigator:not(:nth-child(3n)){
+  border-right:1rpx solid #d2d2d2;
+}
+.nav-list navigator:nth-last-child(1)
+/* .nav-list navigator:nth-last-child(2),
+.nav-list navigator:nth-last-child(3)*/
+{
+  border-bottom:none;
+}
+.nav-item{
+  height:210rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nav-item .iconfont{
+  font-size: 48rpx;
+  margin-bottom:20rpx;
+}
+.nav-list navigator:first-child .iconfont{
+  color:#f39c3b;
+}
+.nav-list navigator:nth-child(2) .iconfont{
+  color:#76c7e4;
+}
+.nav-list navigator:nth-child(3) .iconfont{
+  color:#49cfb4;
+}
+.nav-list navigator:nth-child(4) .iconfont{
+  color:#d4759d;
+}
+.nav-list navigator:nth-child(5) .iconfont{
+  color:#ae85c7;
+}
+.nav-list navigator:nth-child(6) .iconfont{
+  color:#70a3fe;
+}
+.nav-list navigator:nth-child(7) .iconfont{
+  color:#86abd8;
+}

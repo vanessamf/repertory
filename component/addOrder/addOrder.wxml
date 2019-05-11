@@ -1,0 +1,14 @@
+<import src="../../template/orderTmpl/basicInfo.wxml" />
+<import src="../../template/orderTmpl/materials.wxml" />
+
+<view>
+  <view class="sel-item" data-item="{{item}}">
+   <text>{{item.selTitle}}</text>
+   <view class="item-right">
+    <icon class="iconfont icon-you1 "></icon>
+   </view>  
+  </view> 
+  <template is="basicInfo" />
+  <template is="materials" />
+</view>
+

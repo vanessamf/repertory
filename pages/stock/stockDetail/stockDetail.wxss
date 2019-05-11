@@ -1,0 +1,2 @@
+/* pages/stock/stockDetail/stockDetail.wxss */
+@import "../../../template/orderTmpl/orderTmpl.wxss";

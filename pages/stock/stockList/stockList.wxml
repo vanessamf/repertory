@@ -1,0 +1,53 @@
+<!--pages/stock/stockList/stockList.wxml-->
+<import src="../../../template/orderTmpl/selMaterials.wxml" />
+
+
+<view class="sm-container">
+   <view id="calendar-plugin-wrapper" class="calendar-plugin-wrapper"hidden="{{item.isHidden}}" catchtap="toggleCalendar">
+    <calendar id="calendar" style="z-index:9999" calendar-style="calendar" days-color="{{item.dayStyle}}" weeks-type="cn" binddayClick="dayClick"catchtap="stopPropagation"/>
+    </view>
+    <view class="ol-header">
+      <view class="calendar-wrapper">
+        <input  type="text" placeholder="" value='{{item.currentDate}}' disabled="disabled" bindtap="toggleCalendar"/>
+        <icon class="iconfont icon-xia"></icon>
+      </view>
+      <view class="search">
+        <view class="icon-wrapper sousuo">
+           <icon class="iconfont icon-sousuo1"></icon>
+        </view>
+        <input  type="text" placeholder="请输入商品名称或条码"/>
+        <view class="icon-wrapper saomiao">
+          <icon class="iconfont icon-saomiao"></icon>
+        </view>
+      </view> 
+    </view>
+    <!-- <template is="selMaterials2" data="{{...item}}"/> -->
+    <view class="st-wrapper" >
+      <scroll-view class="sm-list" scroll-y="true">
+        <block wx:for="{{item.materials.list}}" wx:for-index="index"  wx:key="">
+          <navigator url="../stockDetail/stockDetail">
+            <view class="sm-item"  data-index="{{index}}">
+              <view class="item-header-wrapper check-wrapper">
+                <text class="item-name">{{item.title}}</text>
+              </view>
+              <view class="item-dec-wrapper">
+                <view class="mb-10 grey-color">{{item.number}}</view>
+                <view class="item-dec-content">
+                  <view class="item-dec grey-color">
+                    <text class="">库存金额：</text>
+                    <text class="">{{item.price}}元</text>
+                </view>
+                <view>
+                  <text class="primary-color">库存数：</text>
+                  <text class="primary-color">{{item.purchaseQuantity}}</text>
+                  <text class="">{{item.unit}}</text>
+                </view>
+                </view>
+                
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view>
+  </view>

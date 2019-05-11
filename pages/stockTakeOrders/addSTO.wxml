@@ -1,0 +1,24 @@
+<!--pages/stockTakeOrders/addSTO.wxml-->
+<import src="../../template/orderTmpl/basicInfo.wxml" />
+<import src="../../template/orderTmpl/materials.wxml" />
+
+<view>
+ <view class="list-title">
+    <text>{{item.basicInfo.title}}</text>
+  </view>
+  <view class="basic-list">
+        <view class="basic-item">
+            <text>{{item.basicInfo.list[0].title}}</text>
+          <view class="item-right">
+            <text>{{item.basicInfo.list[0].content}}</text>
+          </view>
+        </view>  
+        <view class="basic-item">
+          <text>{{item.basicInfo.list[1].title}}</text>
+          <view class="item-right">
+            <switch checked bindchange="" color="#16c4bb"/>
+          </view>
+        </view>     
+  </view>
+  <template is="materials" data="{{...item}}"/>
+</view>

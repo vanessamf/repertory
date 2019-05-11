@@ -1,0 +1,100 @@
+<template name="basicInfo">
+  <view class="list-title">
+    <text>{{basicInfo.title}}</text>
+    <!-- <icon class="iconfont icon-xia3">
+    </icon> -->
+    <text class="submit-color" wx:if="{{flag==0}}">未提交</text>
+    <text class="submit-color" wx:elif="{{flag==1}}">待审批</text>
+    <text class="submit-color" wx:elif="{{flag==2}}">已审批</text>
+  </view>
+  <view class="basic-list">
+        <view class="basic-item">
+            <text>{{basicInfo.list[0].title}}</text>
+          <view class="item-right">
+            <text>{{basicInfo.list[0].content}}</text>
+          </view>
+        </view>  
+        <view class="basic-item">
+          <text>{{basicInfo.list[1].title}}</text>
+          <view class="item-right primary-color">
+            <text class="">{{basicInfo.list[1].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item">
+          <text>{{basicInfo.list[2].title}}</text>
+          <view class="item-right primary-color">
+            <text class="">{{basicInfo.list[2].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item">
+          <text>{{basicInfo.list[3].title}}</text>
+          <view class="item-right primary-color">
+            <text class="">{{basicInfo.list[3].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item"wx:if="{{basicInfo.list[4]}}">
+          <text>{{basicInfo.list[4].title}}</text>
+          <view class="item-right primary-color">
+            <text class="">{{basicInfo.list[4].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+  </view>
+</template>
+<template name="basicInfo2">
+  <view class="list-title">
+    <text>{{basicInfo.title}}</text>
+    <!-- <icon class="iconfont icon-xia3">
+    </icon> -->
+    <text class="submit-color" wx:if="{{flag==0}}">未提交</text>
+    <text class="submit-color" wx:elif="{{flag==1}}">待审批</text>
+    <text class="submit-color" wx:elif="{{flag==2}}">已审批</text>
+  </view>
+  <view class="basic-list">
+        <view class="basic-item">
+            <text>{{basicInfo.list[0].title}}</text>
+          <view class="item-right grey-color">
+            <text>{{basicInfo.list[0].content}}</text>
+          </view>
+        </view>  
+        <view class="basic-item">
+          <text>{{basicInfo.list[1].title}}</text>
+          <view class="item-right grey-color">
+            <text class="">{{basicInfo.list[1].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item">
+          <text>{{basicInfo.list[2].title}}</text>
+          <view class="item-right grey-color">
+            <text class="">{{basicInfo.list[2].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item">
+          <text>{{basicInfo.list[3].title}}</text>
+          <view class="item-right grey-color">
+            <text class="">{{basicInfo.list[3].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+        <view class="basic-item"wx:if="{{basicInfo.list[4]}}">
+          <text>{{basicInfo.list[4].title}}</text>
+          <view class="item-right grey-color">
+            <text class="">{{basicInfo.list[4].content}}</text>
+             <!-- <icon class="iconfont icon-you1">
+             </icon> -->
+          </view>
+        </view>
+  </view>
+</template>

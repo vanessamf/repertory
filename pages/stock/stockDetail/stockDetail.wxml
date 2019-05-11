@@ -1,0 +1,36 @@
+<!--pages/stock/stockDetail/stockDetail.wxml-->
+<view>
+  <view class="sel-item">
+   <text>{{item.title}}</text>
+   <view class="item-right">
+    <text>{{item.content}}</text>
+   </view>  
+  </view> 
+  <view class="list-title">
+    <text>{{item.materials.title}}</text>
+    <view class="title-dec">
+      <view class="num-wrapper">合计<text>40</text>千克</view>
+      <view class="num-wrapper"><text>￥1314.00</text></view>
+    </view>
+  </view>
+  <view class="sel-materials-list materials-stock-list">
+    <block wx:for="{{item.materials.list}}" wx:key="">
+        <view class="sel-materials-item ">
+         <text class="item-name">{{item.title}}</text>
+         <view class="materials-stock-dec">
+            <view class="item-left"> 
+              <view class="item-dec">
+                <text class="grey-color"> 库存金额：</text>
+                <text class="item-price">{{item.price}}元</text>    
+              </view>
+            </view>
+            <view class="item-right">
+              <text class="grey-color"> 库存数：</text>
+              <text class="grey-color">{{item.purchaseQuantity}}</text>
+              <text class="grey-color">{{item.unit}}</text>
+            </view>
+          </view>
+        </view>
+    </block>     
+  </view>
+</view>

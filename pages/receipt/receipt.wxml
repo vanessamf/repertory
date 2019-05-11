@@ -1,0 +1,13 @@
+<!--pages/receipt/receipt.wxml-->
+<view class="receipt-container">
+   <view class="receipt-list">
+      <block wx:for="{{nav}}" wx:key="">
+        <navigator url="{{item.url}}">
+          <view class="receipt-item">
+            <icon class="iconfont {{item.iconClass}}"> </icon>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </block> 
+    </view>
+</view>

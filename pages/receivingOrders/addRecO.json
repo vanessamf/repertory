@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加收货单",
+  "usingComponents": {
+    "addOrder": "../../component/addOrder/addOrder"
+  }
+}

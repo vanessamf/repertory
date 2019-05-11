@@ -1,0 +1,41 @@
+<view class="hp-container">
+  <view class="hp-header">
+    <view class="hp-title">
+      <view class="icon-wrapper">
+        <icon class="iconfont icon-mendian"> </icon>
+      </view>
+      <view class="title-wrapper">
+        <text class="title-text">
+          XX门店库存
+        </text>
+      </view>
+    </view>
+    <view class="repertory-wrapper">
+      <view class="repertory-item">
+          <text>门店总库存</text>
+          <text>1000</text>
+      </view>
+      <view class="repertory-item">
+          <text>门店剩余库存</text>
+          <text>1000</text>
+      </view>
+    </view>
+  </view> 
+  <view class="hp-wrapper">
+    <view class="hp-content">
+      <view class="title">
+        <text>常用服务</text>
+      </view>
+      <view class="nav-list">
+        <block wx:for="{{nav}}" wx:key="">
+          <navigator url="{{item.url}}">
+            <view class="nav-item">
+              <icon class="iconfont {{item.iconClass}}"> </icon>
+              <text>{{item.title}}</text>
+            </view>
+          </navigator>
+        </block> 
+      </view>
+    </view>
+  </view>
+</view>

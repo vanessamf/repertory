@@ -1,0 +1,35 @@
+<import src="../../../template/orderTmpl/basicInfo.wxml" />
+<import src="../../../template/orderTmpl/materials.wxml" />
+
+<view class="main-container">
+  <!-- <view class="sel-item">
+   <text>{{item.selTitle}}</text>
+   <view class="item-right">
+    <icon class="iconfont icon-you1 "></icon>
+   </view>  
+  </view>  -->
+  <scroll-view class="PODetail-wrapper"scroll-y="true">
+    <template is="basicInfo2" data="{{...item}}"/>
+    <template is="materials" data="{{...item}}"/>
+   </scroll-view>
+  
+  <view class="add-order-footer"wx:if="{{item.flag==0}}">
+    <view class="btn-left">
+      <button class="btn-primary sm-btn">打印</button>
+      <button class="btn-default sm-btn">删除</button>
+    </view>
+    <view class="btn-right">
+      <button class="btn-submit md-btn" bindtap='jumpPage'>提交</button>
+    </view>
+  </view>
+  <view class="add-order-footer detail-footer"wx:if="{{item.flag!=0}}">
+    <view class="btn-left">
+      <button class="btn-primary lg-btn">打印</button>
+    </view>
+    <view class="btn-right" bindtap='jumpToHomepage'>
+      
+          <button class="btn-submit lg-btn" bindtap=''>返回首页</button>
+   
+    </view>
+  </view>
+</view>

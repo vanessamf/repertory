@@ -1,0 +1,64 @@
+<template name="materials">
+  <view class="list-title">
+    <text>{{materials.title}}</text>
+    <view class="num-wrapper">共计<text>22</text>项</view>
+    <view class="num-wrapper"><text>￥1314.00</text></view>
+    <navigator url='{{materials.mUrl}}'>
+      <view class="add-mat">
+      <icon class="iconfont icon-icon02">
+      </icon>
+      <text>添加</text>
+    </view>
+    </navigator>
+  </view>
+  <view class="sel-materials-list">
+    <block wx:for="{{materials.list}}" wx:key="">
+        <view class="sel-materials-item">
+          <view class="item-left">
+            <text class="item-name">{{item.title}}</text>
+            <text class="item-num">{{item.number}}</text>
+            <view class="item-dec">
+                <text class="item-price">{{item.price}}元/{{item.unit}}</text>
+                <text class="item-amount">（现有{{item.stockQuantity}}{{item.unit}}）</text>
+            </view>
+          </view>
+          <view class="item-right">
+            <text class="primary-color">{{item.purchaseQuantity}}</text>
+            <text class="">{{item.unit}}</text>
+          </view>
+        </view>
+    </block>     
+  </view>
+</template>
+
+<template name="materials2">
+  <view class="list-title">
+    <text>{{materials.title}}</text>
+    <view class="num-wrapper">已完成盘点<text>2</text>项</view>
+    <navigator url='{{materials.mUrl}}'>
+      <view class="add-mat">
+      <icon class="iconfont icon-icon02">
+      </icon>
+      <text>添加</text>
+    </view>
+    </navigator>
+  </view>
+  <view class="sel-materials-list">
+    <block wx:for="{{materials.list}}" wx:key="">
+        <view class="sel-materials-item">
+          <view class="item-left">
+            <text class="item-name">{{item.title}}</text>
+            <text class="item-num">{{item.number}}</text>
+            <view class="item-dec">
+                <text class="item-price">{{item.price}}元/{{item.unit}}</text>
+                <text class="item-amount">（现有{{item.stockQuantity}}{{item.unit}}）</text>
+            </view>
+          </view>
+          <view class="item-right">
+            <text class="primary-color">{{item.purchaseQuantity}}</text>
+            <text class="">{{item.unit}}</text>
+          </view>
+        </view>
+    </block>     
+  </view>
+</template>

@@ -1,0 +1,4 @@
+<!--pages/returnOrders/RetOList/RetOList.wxml-->
+<import src="../../../template/orderTmpl/orderList.wxml" />
+
+<template is="orderList" data="{{...item}}"/>

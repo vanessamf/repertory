@@ -1,0 +1,4 @@
+<!--pages/purchaseOrders/addPM/addPM.wxml-->
+<import src="../../../template/orderTmpl/selMaterials.wxml" />
+
+<template is="selMaterials" data="{{...item}}"/>

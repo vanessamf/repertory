@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/homepage/homepage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/purchaseOrders/purchaseOrders",
+    "pages/receivingOrders/addRecO",
+    "pages/receivingOrders/addRecM/addRecM",
+    "pages/purchaseOrders/addPM/addPM",
+    "pages/purchaseOrders/PODetail/PODetail",
+    "pages/purchaseOrders/POList/POList",
+    "pages/receivingOrders/RecODetail/RecODetail",
+    "pages/receivingOrders/RecOList/RecOList",
+    "pages/returnOrders/addRetO",
+    "pages/returnOrders/addRetM/addRetM",
+    "pages/returnOrders/RetODetail/RetODetail",
+    "pages/returnOrders/RetOList/RetOList",
+    "pages/stockTakeOrders/addSTO",
+    "pages/stockTakeOrders/addSTM/addSTM",
+    "pages/stockTakeOrders/STODetail/STODetail",
+    "pages/stockTakeOrders/STOList/STOList",
+    "pages/stock/stockList/stockList",
+    "pages/stock/stockDetail/stockDetail",
+    "pages/receipt/receipt"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#16c4bb",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#16c4bb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeS.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profileS.png"
+      }
+    ]
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
+}

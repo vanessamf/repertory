@@ -1,0 +1,4 @@
+<!--pages/stockTakeOrders/STOList/STOList.wxml-->
+<import src="../../../template/orderTmpl/orderList.wxml" />
+
+<template is="orderList" data="{{...item}}"/>

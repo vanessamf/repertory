@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <view class="logo-wrapper">
+    <image src='../../images/logo-pic.png' class="logo-pic"></image>
+    <image src='../../images/logo-text.png' class="logo-text"></image>
+  </view>
+  <view class="login-form">
+    <view class="form-input-wrapper">
+      <icon class="iconfont icon-yonghu"> </icon>
+      <input placeholder='手机号'></input>
+    </view>
+    <view class="form-input-wrapper">
+      <icon class="iconfont icon-mima"> </icon>
+      <input placeholder='请输入动态密码'></input>
+      <text>动态密码</text>
+    </view>
+    <view class="login-btn"bindtap="login">
+      登录
+    </view>
+  </view>
+</view>

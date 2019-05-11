@@ -1,0 +1,2 @@
+/* pages/purchaseOrders/addPM/addPM.wxss */
+@import "../../../template/orderTmpl/orderTmpl.wxss";

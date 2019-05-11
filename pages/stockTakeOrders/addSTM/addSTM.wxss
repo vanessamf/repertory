@@ -1,0 +1,2 @@
+/* pages/stockTakeOrders/addSTM/addSTM.wxss */
+@import "../../../template/orderTmpl/orderTmpl.wxss";

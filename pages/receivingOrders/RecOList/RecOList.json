@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查询收货单",
+  "usingComponents": {
+    "calendar": "plugin://calendar/calendar"
+  }
+}

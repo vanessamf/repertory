@@ -1,0 +1,2 @@
+/* pages/stockTakeOrders/STODetail/STODetail.wxss */
+@import "../../../template/orderTmpl/orderTmpl.wxss";

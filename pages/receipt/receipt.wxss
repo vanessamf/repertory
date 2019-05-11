@@ -1,0 +1,58 @@
+/* pages/receipt/receipt.wxss */
+
+
+.receipt-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size:30rpx;
+  padding:46rpx 66rpx;
+}
+.receipt-list navigator{
+  flex:0 1 46%;
+  margin-bottom: 52rpx;
+  box-sizing:border-box;
+  color:#fff;
+  border-radius:12rpx;
+  box-shadow: 4rpx 4rpx  8rpx 0  #dfdfdf;
+}
+
+
+.receipt-item{
+  height:250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.receipt-item .iconfont{
+  font-size: 48rpx;
+  margin-bottom:30rpx;
+}
+.receipt-list navigator:first-child{
+  background: #f39c3b;
+}
+.receipt-list navigator:nth-child(2){
+  background-color:#76c7e4;
+}
+.receipt-list navigator:nth-child(3){
+  background:#49cfb4;
+}
+.receipt-list navigator:nth-child(4){
+  background:#d4759d;
+}
+.receipt-list navigator:nth-child(5){
+  background:#ae85c7;
+}
+.receipt-list navigator:nth-child(6){
+  background:#70a3fe;
+}
+.receipt-list navigator:nth-child(7){
+  background:#86abd8;
+}
+
+.receipt-list navigator .iconfont{
+  color:#fff;
+}
+

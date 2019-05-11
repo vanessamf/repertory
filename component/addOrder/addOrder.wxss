@@ -1,0 +1,4 @@
+/* component/addOrder/addOrder.wxss */
+
+@import "../../app.wxss";
+@import "../../template/orderTmpl/orderTmpl.wxss";

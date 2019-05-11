@@ -1,0 +1,70 @@
+<!-- 查询列表 -->
+<template name="orderList">
+  <view class="sm-container">
+   <view id="calendar-plugin-wrapper" class="calendar-plugin-wrapper"hidden="{{isHidden}}" catchtap="toggleCalendar">
+    <calendar id="calendar" style="z-index:9999" calendar-style="calendar" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"catchtap="stopPropagation"/>
+    </view>
+    <view class="ol-header">
+      <view class="calendar-wrapper">
+        <input  type="text" placeholder="" value='{{currentDate}}' disabled="disabled" bindtap="toggleCalendar"/>
+        <icon class="iconfont icon-xia"></icon>
+      </view>
+      <view class="search">
+        <view class="icon-wrapper sousuo">
+           <icon class="iconfont icon-sousuo1"></icon>
+        </view>
+        <input  type="text" placeholder="请输入商品名称或条码"/>
+        <view class="icon-wrapper saomiao">
+          <icon class="iconfont icon-saomiao"></icon>
+        </view>
+      </view> 
+    </view>
+    <view class="ol-wrapper" >
+      <scroll-view class="ol-list" scroll-y="true">
+        <block wx:for="{{orders.list}}" wx:key="">
+          <navigator url="{{url}}?flag={{item.flag}}">
+            <view class="ol-item">
+              <view class="item-left">
+                <view class="item-num">
+                    <text class="">{{item.number}}</text>
+                </view>
+                <view class="item-name">
+                  <text>供应商：</text>
+                  <text>{{item.supplier}}</text>
+                </view> 
+                <view class="item-date">
+                  <text>预到货日期：</text>
+                  <text>{{item.deliveryDate}}</text>
+                </view> 
+                <view class="item-date">
+                  <text>申请日期：</text>
+                  <text>{{item.applicationDate}}</text>
+                </view> 
+              </view>
+              <view class="item-right badge-primary " wx:if="{{item.flag==0}}">
+                未提交
+              </view>
+              <view class="item-right badge-default" wx:elif="{{item.flag==1}}">
+                待审批
+              </view>
+              <view class="item-right badge-success" wx:elif="{{item.flag==2}}">
+                已审批
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- <view class="sm-footer">
+      <view class="check-wrapper">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" >
+            <checkbox value="" checked="" />
+            全选
+          </label>
+        </checkbox-group>
+      </view>
+      <button class="con-btn" bindtap='jumpPage'>{{materials.btnName}}</button>
+    </view> -->
+  </view>
+</template>

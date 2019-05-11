@@ -1,0 +1,107 @@
+<!-- 选择原料模板 -->
+<template name="selMaterials">
+  <view class="sm-container">
+    <view class="sm-header">
+      <view class="search">
+        <view class="icon-wrapper sousuo">
+           <icon class="iconfont icon-sousuo1"></icon>
+        </view>
+        <input  type="text" placeholder="请输入商品名称或条码"/>
+        <view class="icon-wrapper saomiao">
+          <icon class="iconfont icon-saomiao"></icon>
+        </view>
+      </view> 
+    </view>
+    <view class="sm-wrapper" >
+      <scroll-view class="sm-list" scroll-y="true">
+      <block wx:for="{{materials.list}}" wx:for-index="index"  wx:key="">
+        <view class="sm-item" bindtap="checkOne" data-index="{{index}}">
+          <view class="item-num-wrapper check-wrapper">
+            <checkbox-group bindchange="">
+              <label class="checkbox" >
+                <checkbox value="" checked="{{item.checked}}" bindtap=''/>
+                <text class="item-num">{{item.number}}</text>
+              </label>
+            </checkbox-group>
+          </view>
+          <view class="item-dec-wrapper">
+            <view class="item-name">
+                {{item.title}}
+            </view>
+            <view class="item-dec-content">
+              <view class="item-dec">
+                <text class="item-price">{{item.price}}元/{{item.unit}}</text>
+                <text class="item-amount">（现有{{item.stockQuantity}}{{item.unit}}）</text>
+             </view>
+             <view>
+              <text class="primary-color">{{item.purchaseQuantity}}</text>
+              <text class="">{{item.unit}}</text>
+             </view>
+            </view>
+            
+          </view>
+        </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="sm-footer">
+      <view class="check-wrapper" bindtap='checkAll'>
+        <checkbox-group bindchange="">
+          <label class="checkbox" >
+            <checkbox value="" checked="{{materials.select_all}}" bindtap=''/>
+            全选
+          </label>
+        </checkbox-group>
+      </view>
+      <button class="con-btn" bindtap='jumpPage'>{{materials.btnName}}</button>
+    </view>
+  </view>
+</template>
+
+<template name="selMaterials2">
+  
+    <view class="sm-wrapper" >
+      <scroll-view class="sm-list" scroll-y="true">
+      <block wx:for="{{materials.list}}" wx:for-index="index"  wx:key="">
+        <view class="sm-item" bindtap="checkOne" data-index="{{index}}">
+          <view class="item-num-wrapper check-wrapper">
+            <checkbox-group bindchange="">
+              <label class="checkbox" >
+                <checkbox value="" checked="{{item.checked}}" bindtap=''/>
+                <text class="item-num">{{item.number}}</text>
+              </label>
+            </checkbox-group>
+          </view>
+          <view class="item-dec-wrapper">
+            <view class="item-name">
+                {{item.title}}
+            </view>
+            <view class="item-dec-content">
+              <view class="item-dec">
+                <text class="item-price">{{item.price}}元/{{item.unit}}</text>
+                <text class="item-amount">（现有{{item.stockQuantity}}{{item.unit}}）</text>
+             </view>
+             <view>
+              <text class="primary-color">{{item.purchaseQuantity}}</text>
+              <text class="">{{item.unit}}</text>
+             </view>
+            </view>
+            
+          </view>
+        </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="sm-footer">
+      <view class="check-wrapper" bindtap='checkAll'>
+        <checkbox-group bindchange="">
+          <label class="checkbox" >
+            <checkbox value="" checked="{{materials.select_all}}" bindtap=''/>
+            全选
+          </label>
+        </checkbox-group>
+      </view>
+      <button class="con-btn" bindtap='jumpPage'>{{materials.btnName}}</button>
+    </view>
+
+</template>
